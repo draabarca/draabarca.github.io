@@ -2538,3 +2538,67 @@ body {
     background: var(--color-whatsapp) !important;
     box-shadow: 0 20px 44px rgba(37, 211, 102, 0.30) !important;
   }
+  /* =========================================================
+   WHATSAPP FLOTANTE — FIX GLOBAL MÓVIL
+   Servicios, Recursos, Contacto, FAQ
+   ========================================================= */
+
+.whatsapp-float {
+  position: fixed !important;
+  right: 22px !important;
+  bottom: 22px !important;
+  z-index: 9999 !important;
+
+  width: 64px !important;
+  height: 64px !important;
+  min-width: 64px !important;
+  min-height: 64px !important;
+
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+
+  border-radius: 999px !important;
+  background: #25D366 !important;
+  box-shadow: 0 18px 44px rgba(37, 211, 102, 0.34) !important;
+
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  text-decoration: none !important;
+}
+
+.whatsapp-float img {
+  width: 34px !important;
+  height: 34px !important;
+  display: block !important;
+  object-fit: contain !important;
+}
+
+.whatsapp-float:hover {
+  transform: translateY(-3px) !important;
+}
+
+/* Ajuste específico para móvil */
+@media (max-width: 760px) {
+  .whatsapp-float {
+    right: 18px !important;
+    bottom: 18px !important;
+    width: 58px !important;
+    height: 58px !important;
+    min-width: 58px !important;
+    min-height: 58px !important;
+  }
+
+  .whatsapp-float img {
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
+
+/* En iPhone con barra inferior o safe area */
+@supports (bottom: env(safe-area-inset-bottom)) {
+  .whatsapp-float {
+    bottom: calc(18px + env(safe-area-inset-bottom)) !important;
+  }
+}
