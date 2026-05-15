@@ -1055,6 +1055,124 @@ body .testimonial-footer span {
         font-size: clamp(2rem, 8vw, 3rem);
       }
     }
+    /* =========================================================
+   CIERRE EDITORIAL PREMIUM
+   ========================================================= */
+
+.final-note-premium {
+  background: #ffffff !important;
+  padding: clamp(72px, 6vw, 104px) 0 !important;
+}
+
+.final-note-card {
+  position: relative;
+  overflow: hidden;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: clamp(46px, 5vw, 72px) clamp(34px, 6vw, 86px);
+  border-radius: 38px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(214, 75, 138, 0.08), transparent 28%),
+    radial-gradient(circle at 90% 22%, rgba(74, 144, 226, 0.10), transparent 32%),
+    #F7F9FC;
+  border: 1px solid rgba(27, 58, 95, 0.10);
+  box-shadow: 0 24px 70px rgba(27, 58, 95, 0.10);
+  text-align: center;
+}
+
+.final-note-card::before {
+  content: "“";
+  position: absolute;
+  top: 18px;
+  left: 34px;
+  color: rgba(214, 75, 138, 0.20);
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(5rem, 8vw, 9rem);
+  font-weight: 800;
+  line-height: 1;
+}
+
+.final-note-card::after {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -70px;
+  width: 190px;
+  height: 190px;
+  border-radius: 999px;
+  background: rgba(74, 144, 226, 0.10);
+}
+
+.final-note-kicker {
+  position: relative;
+  z-index: 1;
+  display: block;
+  margin-bottom: 18px;
+  color: #D64B8A;
+  font-size: 0.82rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+}
+
+.final-note-card p {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 900px;
+  color: #1B3A5F !important;
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: clamp(2.15rem, 3.2vw, 3.7rem) !important;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 1.18 !important;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.final-note-link {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 34px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  background: #D64B8A;
+  color: #ffffff;
+  font-size: 0.98rem;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 0 16px 34px rgba(214, 75, 138, 0.24);
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.final-note-link:hover {
+  background: #B83D72;
+  transform: translateY(-2px);
+  box-shadow: 0 20px 44px rgba(184, 61, 114, 0.30);
+}
+
+@media (max-width: 760px) {
+  .final-note-premium {
+    padding: 56px 0 !important;
+  }
+
+  .final-note-card {
+    border-radius: 28px;
+    padding: 42px 24px;
+  }
+
+  .final-note-card p {
+    font-size: clamp(1.85rem, 8vw, 2.75rem) !important;
+  }
+
+  .final-note-link {
+    width: 100%;
+    max-width: 320px;
+  }
+}
   </style>
 </head>
 
@@ -1234,11 +1352,22 @@ body .testimonial-footer span {
       </div>
     </section>
 
-    <section class="final-note" aria-label="Cierre">
+    <section class="final-note final-note-premium" aria-label="Cierre">
       <div class="container">
-        <p>
-          Cuando hay dolor, debilidad o incertidumbre, una valoración puede ayudarte a recuperar claridad sobre el siguiente paso.
-        </p>
+        <article class="final-note-card">
+          <span class="final-note-kicker">Orientación oportuna</span>
+          <p>
+            Cuando hay dolor, debilidad o incertidumbre, una valoración puede ayudarte a recuperar claridad sobre el siguiente paso.
+          </p>
+          <a
+            class="final-note-link"
+            href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ25yRgSUsrbP98Zuh93i8EL6E7SnYT-O4Kto1BnSRUks4E-4yqX4mFbyPtAaL2iW3UhX0iBztGI?gv=true"
+            target="_blank"
+            rel="noopener"
+          >
+            Agendar una valoración
+          </a>
+        </article>
       </div>
     </section>
   </main>
