@@ -4654,3 +4654,110 @@ button,
     font-size: 1rem !important;
   }
 }
+/* ============================================ */
+/* FIX OFICIAL: alinear mapa de dolor + CTA izquierda */
+/* ============================================ */
+
+/* Contenedor general de la sección anatómica/mapa */
+.anatomy-section,
+.pain-map-section,
+.sciatica-map-section,
+.educational-map-section {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+/* Grid de dos columnas */
+.anatomy-section .container,
+.pain-map-section .container,
+.sciatica-map-section .container,
+.educational-map-section .container {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.95fr) !important;
+  gap: clamp(2.5rem, 5vw, 4rem) !important;
+  align-items: start !important;
+}
+
+/* Columna izquierda */
+.anatomy-section .left-column,
+.pain-map-section .left-column,
+.sciatica-map-section .left-column,
+.educational-map-section .left-column,
+.anatomy-content,
+.pain-map-content,
+.sciatica-content {
+  align-self: start !important;
+}
+
+/* Tarjeta de orientación personalizada */
+.orientation-card,
+.personalized-card,
+.cta-orientation,
+.need-help-card {
+  margin-top: 1.5rem !important;
+  margin-bottom: 0 !important;
+  align-self: start !important;
+}
+
+/* Columna derecha */
+.anatomy-visual,
+.pain-map-visual,
+.sciatica-visual,
+.map-visual,
+.anatomy-image-column,
+.pain-map-image-column {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1.5rem !important;
+  align-self: start !important;
+}
+
+/* Card que contiene el mapa del dolor */
+.anatomy-card,
+.pain-map-card,
+.sciatica-card,
+.map-card {
+  padding: 1.5rem !important;
+  min-height: auto !important;
+}
+
+/* Imagen del mapa del dolor */
+.anatomy-card img,
+.pain-map-card img,
+.sciatica-card img,
+.map-card img,
+img[src*="mapa-dolor-corporal"] {
+  width: 100% !important;
+  max-height: 380px !important;
+  object-fit: contain !important;
+  object-position: center !important;
+}
+
+/* Box "Importante" */
+.important-box,
+.warning-box,
+.note-box,
+.info-warning {
+  margin-top: 0 !important;
+  padding: 1.35rem 1.6rem !important;
+  min-height: auto !important;
+  align-self: stretch !important;
+}
+
+/* Ajuste en pantallas medianas y móviles */
+@media (max-width: 1024px) {
+  .anatomy-section .container,
+  .pain-map-section .container,
+  .sciatica-map-section .container,
+  .educational-map-section .container {
+    grid-template-columns: 1fr !important;
+  }
+
+  .anatomy-card img,
+  .pain-map-card img,
+  .sciatica-card img,
+  .map-card img,
+  img[src*="mapa-dolor-corporal"] {
+    max-height: 420px !important;
+  }
+}
