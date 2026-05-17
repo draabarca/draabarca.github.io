@@ -1,34 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<url>
-  <loc>https://draabarca.github.io/dolor-lumbar-ciatica.html</loc>
-  <lastmod>2026-05-17</lastmod>
-  <priority>0.9</priority>
-</url>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://draabarca.github.io/</loc>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://draabarca.github.io/servicios.html</loc>
     <priority>0.9</priority>
   </url>
+
+  <url>
+    <loc>https://draabarca.github.io/dolor-lumbar-ciatica.html</loc>
+    <lastmod>2026-05-17</lastmod>
+    <priority>0.9</priority>
+  </url>
+
   <url>
     <loc>https://draabarca.github.io/recursos.html</loc>
     <priority>0.8</priority>
   </url>
+
   <url>
     <loc>https://draabarca.github.io/contacto.html</loc>
     <priority>0.9</priority>
   </url>
+
   <url>
     <loc>https://draabarca.github.io/faq.html</loc>
     <priority>0.7</priority>
   </url>
+
   <url>
     <loc>https://draabarca.github.io/privacidad.html</loc>
     <priority>0.3</priority>
   </url>
+
   <url>
     <loc>https://draabarca.github.io/terminos.html</loc>
     <priority>0.3</priority>
