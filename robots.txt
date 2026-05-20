@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://draabarca.github.io/sitemap.xml
+Sitemap: https://draerikaabarca.com/sitemap.xml
