@@ -3202,3 +3202,32 @@ a.btn-cta-primary:hover {
   box-shadow: 0 12px 24px rgba(7, 59, 102, 0.18) !important;
 }
 
+
+/* ============================================ */
+/* Ajuste puntual: sombras azules en botones */
+/* ============================================ */
+
+.btn-primary,
+.header-cta,
+.btn-cta-primary,
+.btn-primary-new,
+.final-note-link,
+.final-cta-card .btn-cta-primary,
+.final-cta-enhanced .btn-cta-primary,
+.resource-body .btn-primary,
+a.btn.btn-primary {
+  box-shadow: 0 10px 22px rgba(11, 79, 138, 0.16) !important;
+}
+
+.btn-primary:hover,
+.header-cta:hover,
+.btn-cta-primary:hover,
+.btn-primary-new:hover,
+.final-note-link:hover,
+.final-cta-card .btn-cta-primary:hover,
+.final-cta-enhanced .btn-cta-primary:hover,
+.resource-body .btn-primary:hover,
+a.btn.btn-primary:hover {
+  box-shadow: 0 12px 24px rgba(7, 59, 102, 0.20) !important;
+}
+
