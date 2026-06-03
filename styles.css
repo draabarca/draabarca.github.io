@@ -3131,3 +3131,74 @@ body {
   margin-bottom: 1.5rem;
   color: var(--white);
 }
+
+/* ============================================ */
+/* Ajuste de botones: azul médico */
+/* ============================================ */
+
+.btn-primary,
+.btn-cta-primary,
+.header-cta,
+.resource-body .btn-primary,
+.final-cta-buttons .btn-cta-primary,
+.faq-cta .btn-primary-new,
+.btn-primary-new {
+  background: #0B4F8A !important;
+  border-color: #0B4F8A !important;
+  color: #ffffff !important;
+}
+
+.btn-primary:hover,
+.btn-cta-primary:hover,
+.header-cta:hover,
+.resource-body .btn-primary:hover,
+.final-cta-buttons .btn-cta-primary:hover,
+.faq-cta .btn-primary-new:hover,
+.btn-primary-new:hover {
+  background: #073B66 !important;
+  border-color: #073B66 !important;
+  color: #ffffff !important;
+}
+cat >> styles.css <<'EOF'
+
+/* ============================================ */
+/* Ajuste puntual: botón Agendar una valoración */
+/* ============================================ */
+
+.final-cta-enhanced .btn-cta-primary,
+.final-cta-card .btn-cta-primary,
+a.btn-cta-primary {
+  background: #0B4F8A !important;
+  border-color: #0B4F8A !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(11, 79, 138, 0.16) !important;
+}
+
+.final-cta-enhanced .btn-cta-primary:hover,
+.final-cta-card .btn-cta-primary:hover,
+a.btn-cta-primary:hover {
+  background: #073B66 !important;
+  border-color: #073B66 !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 24px rgba(7, 59, 102, 0.18) !important;
+}
+
+
+/* ============================================ */
+/* Botón inicio: Agendar una valoración */
+/* ============================================ */
+
+.final-note-link {
+  background: #0B4F8A !important;
+  border: 1px solid #0B4F8A !important;
+  color: #ffffff !important;
+  box-shadow: 0 10px 22px rgba(11, 79, 138, 0.16) !important;
+}
+
+.final-note-link:hover {
+  background: #073B66 !important;
+  border-color: #073B66 !important;
+  color: #ffffff !important;
+  box-shadow: 0 12px 24px rgba(7, 59, 102, 0.18) !important;
+}
+
