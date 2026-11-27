@@ -1,0 +1,2916 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Inicia tu recuperación desde casa con una valoración médica especializada en Medicina de Rehabilitación por videollamada para adultos y menores de edad en México.">
+  <title>Telesalud | Dra. Erika Abarca</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #4a1f7a;
+      --navy-dark: #36155c;
+      --blue: #008b99;
+      --blue-dark: #006e7a;
+      --teal: #00a3b4;
+      --amber: #f59e0b;
+      --amber-soft: #fef3c7;
+      --mint: #e0f6f8;
+      --pale: #f5f0fa;
+      --ink: #262238;
+      --muted: #5c5770;
+      --line: #e6dff0;
+      --paper: #ffffff;
+      --soft: #faf8fc;
+      --shadow: 0 20px 55px rgba(74, 31, 122, .10);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+    img { max-width: 100%; }
+
+    .container {
+      width: min(1160px, calc(100% - 44px));
+      margin-inline: auto;
+    }
+
+    /* HEADER */
+    .site-header {
+      position: relative;
+      z-index: 5;
+      background: rgba(255, 255, 255, .97);
+      border-bottom: 1px solid rgba(230, 223, 240, .9);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand img {
+      display: block;
+      width: 166px;
+      max-height: 58px;
+      object-fit: contain;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: .9rem;
+      font-weight: 650;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--navy);
+      transition: color .2s ease;
+    }
+
+    .nav-links a:hover { color: var(--blue); }
+
+    .nav-cta {
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--amber-soft);
+      color: var(--navy-dark) !important;
+      font-weight: 750;
+      border: 1px solid #fde68a;
+    }
+
+    .nav-cta:hover { background: #fde68a; }
+
+    /* HERO */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      overflow: hidden;
+      min-height: 520px;
+      display: flex;
+      align-items: center;
+      padding: 84px 0;
+      background: #f8f4fc;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -2;
+      background: url("assets/Portada_telerehab.png") center 30% / cover no-repeat;
+      opacity: .92;
+      transform: scale(1.02);
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: linear-gradient(90deg, rgba(251, 248, 254, .98) 0%, rgba(247, 242, 252, .93) 44%, rgba(224, 246, 248, .55) 100%);
+    }
+
+    .hero-copy { max-width: 730px; }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 18px;
+      padding: 8px 15px;
+      border-radius: 999px;
+      color: var(--navy);
+      background: var(--amber-soft);
+      border: 1px solid #fde68a;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, p { margin-top: 0; }
+
+    h1 {
+      color: var(--navy);
+      font-size: clamp(36px, 5vw, 52px);
+      line-height: 1.12;
+      letter-spacing: -1.5px;
+      margin-bottom: 18px;
+    }
+
+    .hero-description {
+      color: var(--ink);
+      font-size: 17px;
+      max-width: 600px;
+      margin-bottom: 20px;
+      line-height: 1.62;
+    }
+
+    .hero-perks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 16px;
+      margin-bottom: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--muted);
+    }
+
+    .hero-perks span::before {
+      content: "✓ ";
+      color: var(--blue);
+      font-weight: 800;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 26px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      font: inherit;
+      font-weight: 750;
+      text-decoration: none;
+      cursor: pointer;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+
+    .button:hover { transform: translateY(-2px); }
+
+    .button-primary {
+      color: #ffffff;
+      background: linear-gradient(135deg, #008b99 0%, #006e7a 100%);
+      box-shadow: 0 12px 26px rgba(0, 139, 153, .28);
+    }
+
+    .button-primary:hover {
+      background: linear-gradient(135deg, #007784 0%, #005b66 100%);
+      box-shadow: 0 16px 32px rgba(0, 139, 153, .35);
+    }
+
+    /* =========================================================================
+       MÓDULO DE TELESALUD (.ts-*)
+       ========================================================================= */
+    .ts-module {
+      --ts-navy: #4a1f7a;
+      --ts-blue: #008b99;
+      --ts-blue-hover: #006e7a;
+      --ts-blue-soft: #e0f6f8;
+      --ts-blue-pill: #e0f6f8;
+      --ts-amber: #d97706;
+      --ts-amber-soft: #fef3c7;
+      --ts-text: #262238;
+      --ts-muted: #5c5770;
+      --ts-border: #e6dff0;
+      --ts-bg-soft: #faf8fc;
+      --ts-white: #ffffff;
+      --ts-shadow-sm: 0 6px 20px rgba(74, 31, 122, 0.05);
+      --ts-shadow-md: 0 14px 36px rgba(74, 31, 122, 0.08);
+
+      color: var(--ts-text);
+      background-color: var(--ts-white);
+      width: 100%;
+      overflow-x: hidden;
+    }
+
+    .ts-container {
+      width: min(1140px, 92%);
+      margin: 0 auto;
+    }
+
+    .ts-section-header {
+      text-align: center;
+      max-width: 720px;
+      margin: 0 auto 48px;
+    }
+
+    .ts-pill {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .ts-pill-blue { background-color: var(--ts-blue-pill); color: var(--ts-blue); }
+    .ts-pill-green { background-color: var(--ts-amber-soft); color: #92400e; }
+
+    .ts-section-title {
+      font-size: clamp(26px, 3.6vw, 36px);
+      font-weight: 800;
+      color: var(--ts-navy);
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin: 0 0 14px;
+    }
+
+    .ts-section-subtitle {
+      font-size: 16px;
+      color: var(--ts-muted);
+      margin: 0;
+    }
+
+    /* 1. PERFIL ESPECIALISTA + CARRUSEL LOGOS GRANDES */
+    .ts-specialist-section {
+      padding: 56px 0 64px;
+      background: linear-gradient(180deg, #faf6fd 0%, #ffffff 100%);
+    }
+
+    .ts-profile-card {
+      background: var(--ts-white);
+      border: 1px solid #ebe4f4;
+      border-radius: 26px;
+      padding: 36px;
+      box-shadow: var(--ts-shadow-md);
+      display: grid;
+      grid-template-columns: 310px 1fr;
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    .ts-photo-box {
+      position: relative;
+      background: linear-gradient(160deg, #4a1f7a 0%, #008b99 100%);
+      border-radius: 20px;
+      min-height: 360px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 28px rgba(74, 31, 122, 0.18);
+    }
+
+    .ts-photo-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .ts-photo-fallback {
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      text-align: center;
+      padding: 24px;
+    }
+
+    .ts-photo-badge {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      background: rgba(255, 255, 255, 0.97);
+      border-radius: 14px;
+      padding: 10px 14px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.14);
+    }
+
+    .ts-photo-badge-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 9px;
+      background: var(--ts-amber-soft);
+      color: var(--ts-amber);
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .ts-photo-badge strong { display: block; font-size: 12px; color: var(--ts-navy); line-height: 1.25; }
+    .ts-photo-badge span { display: block; font-size: 11px; color: var(--ts-muted); }
+
+    .ts-profile-info { display: flex; flex-direction: column; justify-content: space-between; }
+
+    .ts-doctor-name {
+      font-size: clamp(26px, 3vw, 34px);
+      font-weight: 800;
+      color: var(--ts-navy);
+      margin: 0 0 4px;
+      letter-spacing: -0.02em;
+    }
+
+    .ts-doctor-role { font-size: 15px; font-weight: 700; color: var(--ts-blue); margin: 0 0 24px; }
+
+    .ts-credentials-list { display: flex; flex-direction: column; gap: 18px; margin-bottom: 28px; }
+    .ts-credential-item { display: flex; align-items: flex-start; gap: 14px; }
+
+    .ts-cred-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .ts-cred-icon-blue { background: var(--ts-blue-soft); color: var(--ts-blue); }
+    .ts-cred-icon-green { background: var(--ts-amber-soft); color: var(--ts-amber); }
+    .ts-credential-item h4 { font-size: 15px; font-weight: 700; color: var(--ts-navy); margin: 0 0 2px; }
+    .ts-credential-item p { font-size: 13.5px; color: var(--ts-muted); margin: 0; line-height: 1.5; }
+
+    .ts-profile-meta-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1.15fr;
+      gap: 14px;
+      align-items: stretch;
+    }
+
+    .ts-meta-box {
+      background: var(--ts-bg-soft);
+      border: 1px solid var(--ts-border);
+      border-radius: 14px;
+      padding: 14px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .ts-meta-box span {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #6b6482;
+      margin-bottom: 4px;
+    }
+
+    .ts-meta-box strong { font-size: 17px; font-weight: 800; color: var(--ts-navy); }
+
+    .ts-sep-btn {
+      background: var(--ts-blue);
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 14px 18px;
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: background-color 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 8px 20px rgba(0, 139, 153, 0.22);
+    }
+
+    .ts-sep-btn:hover { background: var(--ts-blue-hover); transform: translateY(-2px); color: #ffffff; }
+    .ts-sep-btn strong { font-size: 13.5px; font-weight: 700; line-height: 1.3; margin-bottom: 3px; }
+    .ts-sep-btn span { font-size: 11.5px; opacity: 0.92; display: inline-flex; align-items: center; gap: 4px; }
+
+    /* Carrusel Logos Ampliados */
+    .ts-logos-wrapper {
+      margin-top: 32px;
+      background: var(--ts-white);
+      border: 1px solid #ebe4f4;
+      border-radius: 22px;
+      padding: 26px 28px;
+      box-shadow: var(--ts-shadow-sm);
+    }
+
+    .ts-logos-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 18px;
+      gap: 12px;
+    }
+
+    .ts-logos-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: #6b6482;
+      margin: 0;
+    }
+
+    .ts-carousel-controls { display: flex; gap: 8px; }
+
+    .ts-carousel-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 1px solid var(--ts-border);
+      background: var(--ts-white);
+      color: var(--ts-navy);
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .ts-carousel-btn:hover { background: var(--ts-blue-soft); border-color: var(--ts-blue); color: var(--ts-blue); }
+    .ts-logos-viewport { overflow: hidden; width: 100%; position: relative; }
+    .ts-logos-track { display: flex; gap: 20px; transition: transform 0.36s cubic-bezier(0.25, 1, 0.5, 1); will-change: transform; }
+
+    .ts-logo-slide {
+      flex: 0 0 calc(25% - 15px);
+      min-width: 210px;
+      height: 136px;
+      background: var(--ts-bg-soft);
+      border: 1px solid #ebe4f4;
+      border-radius: 16px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .ts-logo-slide:hover {
+      background: #ffffff;
+      box-shadow: var(--ts-shadow-sm);
+    }
+
+    .ts-logo-slide img {
+      max-width: 92%;
+      max-height: 92px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .ts-logo-placeholder { display: none; flex-direction: column; align-items: center; justify-content: center; gap: 3px; }
+    .ts-logo-placeholder strong { font-size: 13px; font-weight: 700; color: var(--ts-navy); }
+    .ts-logo-placeholder small { font-size: 10.5px; color: #6b6482; }
+
+    /* 3. ESTRUCTURA Y VALOR DE LA CONSULTA (SELECTOR INTERACTIVO) */
+    .ts-structure-section { padding: 76px 0; background: linear-gradient(180deg, #faf6fd 0%, #f3fbfc 100%); }
+    .ts-interactive-value { padding: 72px 0; }
+    .ts-iv-header { text-align: center; max-width: 720px; margin: 0 auto 40px; }
+    .ts-iv-header .ts-pill { margin-bottom: 14px; }
+    .ts-iv-title { font-size: clamp(1.8rem, 3.2vw, 2.4rem); color: #4a1f7a; margin: 0 0 12px; line-height: 1.2; }
+    .ts-iv-subtitle { color: #4b5563; font-size: 1.03rem; line-height: 1.62; margin: 0 0 14px; }
+
+    .ts-iv-prompt {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: #ffffff;
+      border: 1px solid #d7c9ee;
+      color: #4a1f7a;
+      font-size: 0.88rem;
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(74, 31, 122, 0.06);
+    }
+
+    .ts-iv-pulse {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #008b99;
+      animation: tsPulseAnim 1.5s ease-in-out infinite;
+    }
+
+    @keyframes tsPulseAnim {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.45); opacity: 0.45; }
+    }
+
+    .ts-iv-layout {
+      display: grid;
+      grid-template-columns: minmax(290px, 380px) 1fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .ts-iv-tabs { display: flex; flex-direction: column; gap: 10px; }
+
+    .ts-iv-tab {
+      position: relative;
+      appearance: none;
+      width: 100%;
+      text-align: left;
+      background: #ffffff;
+      border: 1px solid #e8e0f5;
+      border-radius: 15px;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      color: #374151;
+      transition: all 0.2s ease;
+      box-shadow: 0 2px 8px rgba(74, 31, 122, 0.03);
+    }
+
+    .ts-iv-tab * { pointer-events: none; }
+
+    .ts-iv-tab:hover {
+      border-color: #c9b5ea;
+      background: #faf7ff;
+      transform: translateX(3px);
+    }
+
+    .ts-iv-tab.is-active {
+      background: #4a1f7a;
+      border-color: #4a1f7a;
+      color: #ffffff;
+      box-shadow: 0 8px 20px rgba(74, 31, 122, 0.18);
+    }
+
+    .ts-iv-tab-left { display: flex; align-items: center; gap: 12px; min-width: 0; }
+
+    .ts-iv-tab-num {
+      flex-shrink: 0;
+      width: 28px;
+      height: 28px;
+      border-radius: 8px;
+      background: #f2ebfb;
+      color: #4a1f7a;
+      font-size: 0.8rem;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease;
+    }
+
+    .ts-iv-tab.is-active .ts-iv-tab-num {
+      background: rgba(255, 255, 255, 0.18);
+      color: #ffffff;
+    }
+
+    .ts-iv-tab-label { font-size: 0.94rem; font-weight: 600; line-height: 1.35; }
+
+    .ts-iv-tab-cue {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #008b99;
+      white-space: nowrap;
+      animation: tsCueSlide 2s ease-in-out infinite;
+    }
+
+    .ts-iv-tab.is-active .ts-iv-tab-cue { display: none; }
+
+    @keyframes tsCueSlide {
+      0%, 100% { transform: translateX(0); opacity: 0.75; }
+      50% { transform: translateX(3px); opacity: 1; }
+    }
+
+    .ts-iv-viewer {
+      background: #ffffff;
+      border: 1px solid #e8e0f5;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(74, 31, 122, 0.06);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ts-iv-media {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      max-height: 360px;
+      background: #f5f2fa;
+      overflow: hidden;
+      border-bottom: 1px solid #efe9f8;
+    }
+
+    .ts-iv-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+
+    .ts-iv-fade { animation: tsIvFade 0.28s ease; }
+
+    @keyframes tsIvFade {
+      from { opacity: 0.35; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .ts-iv-content {
+      padding: 28px 32px 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-grow: 1;
+    }
+
+    .ts-iv-step-tag {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #008b99;
+      margin-bottom: 8px;
+    }
+
+    .ts-iv-content h3 {
+      font-size: 1.38rem;
+      font-weight: 700;
+      color: #4a1f7a;
+      margin: 0 0 12px;
+      line-height: 1.3;
+    }
+
+    .ts-iv-content p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #374151;
+      line-height: 1.68;
+      margin: 0;
+    }
+
+    .ts-iv-ai-disclaimer {
+      margin-top: 20px;
+      padding-top: 14px;
+      border-top: 1px solid #f1ecf8;
+      font-size: 0.8rem;
+      color: #6b7280;
+      line-height: 1.45;
+    }
+
+    @media (max-width: 880px) {
+      .ts-iv-layout { grid-template-columns: 1fr; gap: 20px; }
+      .ts-iv-tabs { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 8px; }
+      .ts-iv-tab { width: auto; flex: 0 1 auto; padding: 10px 14px; border-radius: 999px; }
+      .ts-iv-tab-num { width: 22px; height: 22px; font-size: 0.72rem; border-radius: 50%; }
+      .ts-iv-tab-label { font-size: 0.86rem; }
+      .ts-iv-tab-cue { display: none; }
+      .ts-iv-content { padding: 22px 22px 24px; }
+      .ts-iv-content h3 { font-size: 1.2rem; }
+    }
+
+    /* 4. OPINIONES DE GOOGLE BUSINESS */
+    .ts-reviews-section {
+      padding: 76px 0;
+      background: var(--ts-white);
+    }
+
+    .ts-google-stars {
+      color: #f59e0b;
+      letter-spacing: 2px;
+      font-size: 15px;
+    }
+
+    .ts-reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .ts-review-card {
+      background: var(--ts-bg-soft);
+      border: 1px solid #ebe4f4;
+      border-radius: 20px;
+      padding: 26px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 16px;
+      box-shadow: var(--ts-shadow-sm);
+    }
+
+    .ts-review-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    .ts-review-text {
+      margin: 0;
+      font-size: 14px;
+      color: var(--ts-text);
+      line-height: 1.6;
+      font-style: italic;
+    }
+
+    .ts-review-author {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding-top: 12px;
+      border-top: 1px solid #ebe4f4;
+    }
+
+    .ts-review-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #4a1f7a, #008b99);
+      color: #ffffff;
+      font-size: 13px;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+    }
+
+    .ts-review-author strong {
+      display: block;
+      font-size: 13.5px;
+      color: var(--ts-navy);
+      line-height: 1.2;
+    }
+
+    .ts-review-author span {
+      display: block;
+      font-size: 11.5px;
+      color: var(--ts-muted);
+    }
+
+    /* 2. CÓMO FUNCIONA TELESALUD (FLUJO EN 3 PASOS HACIA AGENDA) */
+    .ts-flow-section { padding: 72px 0; background: #faf8fc; }
+    .ts-flow-header { text-align: center; max-width: 720px; margin: 0 auto 44px; }
+
+    .ts-flow-pill {
+      display: inline-block;
+      background: #e0f7fa;
+      color: #00798c;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 16px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .ts-flow-header h2 {
+      font-size: clamp(1.8rem, 3.2vw, 2.35rem);
+      color: #4a1f7a;
+      margin: 0 0 12px;
+      line-height: 1.2;
+    }
+
+    .ts-flow-header p {
+      color: #4b5563;
+      font-size: 1.05rem;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .ts-flow-track {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+      align-items: stretch;
+    }
+
+    .ts-flow-step {
+      position: relative;
+      background: #ffffff;
+      border: 1px solid #e8e0f5;
+      border-radius: 20px;
+      padding: 22px 20px 24px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      text-decoration: none;
+      color: inherit;
+      box-shadow: 0 6px 22px rgba(74, 31, 122, 0.04);
+      transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+    }
+
+    .ts-flow-step:hover {
+      transform: translateY(-5px);
+      border-color: #008b99;
+      box-shadow: 0 14px 30px rgba(74, 31, 122, 0.11);
+    }
+
+    .ts-flow-step:not(:last-child)::after {
+      content: "→";
+      position: absolute;
+      right: -21px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #f3edfa;
+      border: 1px solid #dfd3f2;
+      color: #4a1f7a;
+      font-size: 0.95rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+    }
+
+    .ts-flow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #f3edfa;
+      color: #4a1f7a;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border-radius: 999px;
+      margin-bottom: 14px;
+    }
+
+    .ts-flow-img-box {
+      width: 100%;
+      height: 185px;
+      background: #faf8fd;
+      border: 1px solid #f0eaf8;
+      border-radius: 14px;
+      padding: 10px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .ts-flow-img-box img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+
+    .ts-flow-step h3 {
+      font-size: 1.14rem;
+      font-weight: 700;
+      color: #4a1f7a;
+      margin: 0 0 8px;
+      line-height: 1.3;
+    }
+
+    .ts-flow-step p {
+      font-size: 0.92rem;
+      color: #4b5563;
+      line-height: 1.58;
+      margin: 0 0 14px;
+      flex-grow: 1;
+    }
+
+    .ts-flow-card-cta {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: #008b99;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .ts-flow-cta-box {
+      margin: 34px auto 0;
+      max-width: 780px;
+      background: linear-gradient(135deg, #4a1f7a 0%, #36155c 55%, #008b99 100%);
+      color: #ffffff;
+      border-radius: 20px;
+      padding: 22px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      text-decoration: none;
+      box-shadow: 0 14px 30px rgba(74, 31, 122, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .ts-flow-cta-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px rgba(74, 31, 122, 0.28);
+    }
+
+    .ts-flow-cta-copy strong {
+      display: block;
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 3px;
+    }
+
+    .ts-flow-cta-copy span {
+      display: block;
+      font-size: 0.92rem;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .ts-flow-cta-btn {
+      flex-shrink: 0;
+      background: #ffffff;
+      color: #4a1f7a;
+      font-weight: 800;
+      font-size: 0.94rem;
+      padding: 12px 20px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .ts-arrow-down {
+      display: inline-block;
+      animation: tsArrowBounce 1.4s ease-in-out infinite;
+    }
+
+    @keyframes tsArrowBounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(4px); }
+    }
+
+    @media (max-width: 900px) {
+      .ts-flow-track {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .ts-flow-step:not(:last-child)::after {
+        content: "↓";
+        display: flex;
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -22px;
+        transform: translateX(-50%);
+      }
+      .ts-flow-img-box { height: 170px; }
+      .ts-flow-cta-box { flex-direction: column; text-align: center; }
+    }
+
+    /* =========================================================================
+       BLOQUE DE AGENDA (#agenda) — LIMPIO Y ENFOCADO EN LA RESERVA
+       ========================================================================= */
+    .booking-section {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(64px, 8vw, 100px) 0;
+      background:
+        radial-gradient(circle at 10% 15%, rgba(0, 163, 180, .10), transparent 30%),
+        linear-gradient(145deg, #f8f4fc 0%, #eef9fa 100%);
+    }
+
+    .booking-panel {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(280px, .76fr) minmax(0, 1.24fr);
+      overflow: hidden;
+      border: 1px solid #e6dff0;
+      border-radius: 28px;
+      background: #ffffff;
+      box-shadow: 0 24px 70px rgba(74, 31, 122, .13);
+    }
+
+    .booking-aside {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(28px, 4vw, 44px);
+      color: #ffffff;
+      background: linear-gradient(150deg, #4a1f7a 0%, #5e2991 48%, #008b99 100%);
+    }
+
+    .booking-aside::before,
+    .booking-aside::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .booking-aside::before { width: 300px; height: 300px; top: -130px; right: -150px; }
+    .booking-aside::after { width: 220px; height: 220px; top: -90px; right: -110px; }
+    .booking-aside > * { position: relative; }
+
+    .booking-aside .aside-tag {
+      display: inline-block;
+      margin: 0 0 18px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #ffffff;
+      background: rgba(255, 255, 255, .18);
+      border: 1px solid rgba(255, 255, 255, .28);
+    }
+
+    .booking-aside h2 {
+      margin: 0 0 12px;
+      color: #ffffff;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(2rem, 3.2vw, 2.7rem);
+      font-weight: 600;
+      letter-spacing: -.035em;
+      line-height: 1.08;
+    }
+
+    .booking-aside > p:not(.aside-tag) {
+      color: rgba(255,255,255,.92);
+      font-size: .96rem;
+      margin: 0;
+    }
+
+    .booking-price {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin: 24px 0;
+      padding: 16px 18px;
+      border-radius: 16px;
+      color: #4a1f7a;
+      background: #ffffff;
+      box-shadow: 0 12px 32px rgba(34, 12, 60, .2);
+    }
+
+    .booking-price strong { font-size: 2rem; line-height: 1; }
+    .booking-price span { color: #5c5770; font-size: .92rem; font-weight: 650; }
+
+    .booking-facts {
+      display: grid;
+      gap: 12px;
+      margin: 0 0 24px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .booking-facts li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #ffffff;
+      font-size: .92rem;
+    }
+
+    .booking-facts li::before {
+      content: "✓";
+      width: 22px;
+      height: 22px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 22px;
+      border-radius: 50%;
+      color: #ffffff;
+      background: rgba(255, 255, 255, .2);
+      font-size: .78rem;
+      font-weight: 900;
+    }
+
+    .booking-aside-creds {
+      padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.22);
+      font-size: .8rem;
+      color: rgba(255,255,255,.9);
+      line-height: 1.5;
+    }
+
+    .booking-consent {
+      padding: clamp(26px, 4vw, 44px);
+      background: #ffffff;
+    }
+
+    .agenda-lead-banner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+      border-radius: 16px;
+      background: #f8f5fc;
+      border: 1px solid #e2d8f2;
+      border-left: 5px solid #4a1f7a;
+    }
+
+    .agenda-lead-banner h3 {
+      margin: 0 0 3px;
+      color: #4a1f7a;
+      font-size: 1.25rem;
+      font-weight: 800;
+    }
+
+    .agenda-lead-banner p {
+      margin: 0;
+      color: #5c5770;
+      font-size: .9rem;
+    }
+
+    .agenda-down-indicator {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #4a1f7a;
+      color: #ffffff;
+      display: grid;
+      place-items: center;
+      font-size: 1rem;
+      font-weight: 800;
+      animation: tsArrowBounce 1.4s ease-in-out infinite;
+    }
+
+    .consent-list {
+      display: grid;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .consent-item {
+      display: grid;
+      grid-template-columns: 21px 1fr;
+      align-items: start;
+      gap: 11px;
+      padding: 13px 14px;
+      border: 1.5px solid #e6dff0;
+      border-radius: 13px;
+      background: #fcfbfe;
+      font-size: .9rem;
+      line-height: 1.5;
+      cursor: pointer;
+      transition: border-color .2s ease, box-shadow .2s ease, background .2s ease;
+    }
+
+    .consent-item:has(input:checked) {
+      border-color: #008b99;
+      background: #f2fbfc;
+      box-shadow: 0 0 0 2px rgba(0, 139, 153, .12);
+    }
+
+    .consent-item input {
+      width: 19px;
+      height: 19px;
+      margin: 2px 0 0;
+      accent-color: #008b99;
+      cursor: pointer;
+    }
+
+    .consent-item a {
+      color: #008b99;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    .registro-firma-panel {
+      display: none;
+      margin-top: 18px;
+      padding: 20px;
+      border: 1.5px solid #d5eaed;
+      border-radius: 16px;
+      background: #f9fcfd;
+      box-shadow: 0 8px 24px rgba(74, 31, 122, .05);
+    }
+
+    .registro-firma-panel.is-visible {
+      display: block;
+      animation: fadeSlideDown .25s ease-out;
+    }
+
+    @keyframes fadeSlideDown {
+      from { opacity: 0; transform: translateY(-6px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .registro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .registro-full { grid-column: 1 / -1; }
+
+    .registro-field label {
+      display: block;
+      font-size: .8rem;
+      font-weight: 700;
+      color: #4a1f7a;
+      margin-bottom: 5px;
+    }
+
+    .registro-input {
+      width: 100%;
+      padding: 10px 13px;
+      border: 1px solid #d4cce2;
+      border-radius: 10px;
+      font: inherit;
+      font-size: .9rem;
+      color: #262238;
+      background: #ffffff;
+    }
+
+    .registro-input:focus {
+      outline: none;
+      border-color: #008b99;
+      box-shadow: 0 0 0 3px rgba(0, 139, 153, .14);
+    }
+
+    .pediatric-toggle-box {
+      grid-column: 1 / -1;
+      padding: 13px 15px;
+      border-radius: 12px;
+      background: #f5f0fa;
+      border: 1px solid #dfd3f2;
+    }
+
+    .pediatric-toggle-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: .88rem;
+      font-weight: 650;
+      color: #4a1f7a;
+      cursor: pointer;
+      margin: 0;
+      line-height: 1.45;
+    }
+
+    .pediatric-toggle-label input {
+      width: 18px;
+      height: 18px;
+      margin-top: 2px;
+      flex-shrink: 0;
+      accent-color: #4a1f7a;
+    }
+
+    .tutor-wrapper {
+      display: none;
+      margin-top: 12px;
+    }
+
+    .tutor-wrapper.is-visible { display: block; }
+
+    .identity-check-box {
+      grid-column: 1 / -1;
+      padding: 13px 15px;
+      border-radius: 12px;
+      background: #ffffff;
+      border: 1.5px solid #d4cce2;
+    }
+
+    .booking-alert {
+      display: none;
+      margin-top: 14px;
+      padding: 12px 15px;
+      border-radius: 11px;
+      background: #f5f0fa;
+      border: 1px solid #4a1f7a;
+      color: #36155c;
+      font-size: .86rem;
+      font-weight: 650;
+      line-height: 1.45;
+    }
+
+    .booking-alert.is-visible {
+      display: block;
+      animation: fadeSlideDown .2s ease-out;
+    }
+
+    .booking-action {
+      width: 100%;
+      min-height: 52px;
+      margin-top: 18px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 22px;
+      border: 0;
+      border-radius: 13px;
+      background: linear-gradient(135deg, #008b99 0%, #006e7a 100%);
+      color: #ffffff;
+      font: inherit;
+      font-size: .98rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 12px 28px rgba(0, 139, 153, .25);
+      transition: background .2s ease, transform .2s ease, opacity .2s ease;
+    }
+
+    .booking-action:hover:not(:disabled) {
+      transform: translateY(-2px);
+      box-shadow: 0 16px 32px rgba(0, 139, 153, .32);
+    }
+
+    .booking-action:disabled {
+      opacity: .75;
+      cursor: wait;
+    }
+
+    .booking-note {
+      margin: 14px 0 0;
+      color: #6b6482;
+      font-size: .82rem;
+      line-height: 1.55;
+    }
+
+    /* FAQ */
+    .faq-section { padding: 76px 0; background: var(--paper); }
+    .section-heading { max-width: 740px; margin: 0 auto 38px; text-align: center; }
+    .section-title { color: var(--navy); font-size: clamp(26px, 3.6vw, 36px); font-weight: 800; margin-bottom: 12px; }
+    .faq-list { max-width: 850px; display: grid; gap: 12px; margin: 0 auto; }
+    details { padding: 18px 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--soft); }
+    summary { color: var(--navy); font-weight: 750; cursor: pointer; }
+    details p { margin: 12px 0 0; color: var(--muted); }
+
+    /* FOOTER ALINEADO */
+    .site-footer {
+      color: #efeaf7;
+      background: #36155c;
+      padding: 38px 0 0;
+    }
+    .site-footer .footer-grid {
+      width: min(100% - 44px, 1160px);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+    .site-footer .footer-logo { display: block; width: 170px; max-width: 100%; height: auto; margin: 0 0 16px; object-fit: contain; }
+    .site-footer .footer-brand p { max-width: 360px; color: #dcd3eb; font-size: .9rem; line-height: 1.65; }
+    .site-footer h3 { margin: 0 0 14px; color: #fff; font-size: .85rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; }
+    .site-footer .footer-list { margin: 0; padding: 0; list-style: none; }
+    .site-footer .footer-list li { margin: 0 0 9px; }
+    .site-footer a { color: #efeaf7; text-decoration: none; }
+    .site-footer a:hover { color: #fbbf24; text-decoration: underline; }
+    .site-footer .social-icons { display: flex; flex-wrap: wrap; gap: 9px; }
+    .site-footer .social-icons a {
+      display: grid;
+      width: 36px;
+      height: 36px;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.22);
+      border-radius: 50%;
+      background: rgba(255,255,255,.08);
+    }
+    .site-footer .social-icons svg, .site-footer .social-icons img { display: block; width: 17px; height: 17px; object-fit: contain; }
+    .site-footer .footer-bottom { margin-top: 30px; border-top: 1px solid rgba(255,255,255,.16); }
+    .site-footer .footer-bottom-inner {
+      width: min(100% - 44px, 1160px);
+      margin: 0 auto;
+      padding: 15px 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px 24px;
+      flex-wrap: wrap;
+    }
+    .site-footer .footer-bottom-inner p { margin: 0; color: #dcd3eb; font-size: .78rem; }
+
+    .whatsapp-float {
+      position: fixed;
+      z-index: 20;
+      right: 20px;
+      bottom: 20px;
+      width: 58px;
+      height: 58px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #25d366;
+      box-shadow: 0 8px 24px rgba(0,0,0,.22);
+    }
+    .whatsapp-float img { width: 33px; height: 33px; object-fit: contain; }
+
+    @media (max-width: 960px) {
+      .ts-profile-card { grid-template-columns: 1fr; padding: 26px; }
+      .ts-photo-box { max-width: 340px; margin: 0 auto; width: 100%; }
+      .ts-structure-grid, .ts-reviews-grid { grid-template-columns: 1fr; }
+      .booking-panel { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .nav-links a:not(.nav-cta) { display: none; }
+      .ts-profile-meta-grid, .registro-grid { grid-template-columns: 1fr; }
+      .ts-logo-slide { flex: 0 0 calc(50% - 10px); min-width: 155px; height: 118px; }
+      .site-footer .footer-grid { grid-template-columns: 1fr; }
+      .agenda-lead-banner { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="Inicio, Dra. Erika Abarca">
+        <img src="assets/logo.png" alt="Dra. Erika Abarca · Medicina de Rehabilitación">
+      </a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="index.html">Inicio</a>
+        <a href="servicios.html">Servicios</a>
+        <a href="recursos.html">Recursos</a>
+        <a href="contacto.html">Contacto</a>
+        <a href="telesalud.html">Telesalud</a>
+        <a class="nav-cta" href="#agenda">Agendar videollamada</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-copy">
+          <p class="eyebrow">Atención médica especializada en línea · México</p>
+          <h1>Inicia tu recuperación desde casa, a tu ritmo.</h1>
+          <p class="hero-description">
+            Recibe una valoración médica en Medicina de Rehabilitación por videollamada, de forma cercana y sin traslados, para personas adultas y menores de edad en México.
+          </p>
+          <div class="hero-perks" aria-label="Beneficios principales">
+            <span>Sin salir de casa</span>
+            <span>Adultos y menores de edad</span>
+            <span>Orientación clara desde el inicio</span>
+          </div>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#agenda">Agenda tu consulta aquí <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="ts-module" id="ts-telesalud-root">
+
+      <!-- 1. PERFIL DE LA ESPECIALISTA Y CARRUSEL DE INSTITUCIONES / COFEPRIS -->
+      <section class="ts-specialist-section">
+        <div class="ts-container">
+          <div class="ts-profile-card">
+            <div class="ts-photo-box">
+              <img
+                src="assets/dra-erika-abarca.jpg"
+                alt="Dra. Erika Abarca Ortega — Especialista en Medicina de Rehabilitación"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+              >
+              <div class="ts-photo-fallback" style="display:none;">Dra. Erika Abarca Ortega</div>
+
+              <div class="ts-photo-badge">
+                <div class="ts-photo-badge-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <circle cx="12" cy="8" r="6"></circle>
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                  </svg>
+                </div>
+                <div>
+                  <strong>Medicina de Rehabilitación</strong>
+                  <span>Certificación CONACEM Vigente</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="ts-profile-info">
+              <div>
+                <h2 class="ts-doctor-name">Dra. Erika Abarca Ortega</h2>
+                <p class="ts-doctor-role">Médico Cirujano y Partero · Especialista en Medicina de Rehabilitación</p>
+
+                <div class="ts-credentials-list">
+                  <div class="ts-credential-item">
+                    <div class="ts-cred-icon ts-cred-icon-blue">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4>Médico Cirujano y Partero</h4>
+                      <p>Egresada de la Escuela Superior de Medicina del Instituto Politécnico Nacional (IPN).</p>
+                    </div>
+                  </div>
+
+                  <div class="ts-credential-item">
+                    <div class="ts-cred-icon ts-cred-icon-blue">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                        <path d="M12 8v8M8 12h8"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4>Especialidad en Medicina de Rehabilitación</h4>
+                      <p>Sede en el Instituto Nacional de Rehabilitación "Dr. Luis Guillermo Ibarra Ibarra" (INR) de la Universidad Nacional Autónoma de México (UNAM).</p>
+                    </div>
+                  </div>
+
+                  <div class="ts-credential-item">
+                    <div class="ts-cred-icon ts-cred-icon-green">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                      </svg>
+                    </div>
+                    <div>
+                      <h4>Certificación de Especialidad Médica</h4>
+                      <p>Certificada por el Comité Normativo Nacional de Consejos de Especialidades Médicas (CONACEM) a través del Consejo Mexicano de Medicina de Rehabilitación.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="ts-profile-meta-grid">
+                <div class="ts-meta-box">
+                  <span>Cédula de Especialidad</span>
+                  <strong>14317149</strong>
+                </div>
+                <div class="ts-meta-box">
+                  <span>Aviso Funcionamiento</span>
+                  <strong>2612055036B00004</strong>
+                </div>
+                <a href="https://cedulaprofesional.sep.gob.mx/cedula/presidencia/indexAvanzada.action" target="_blank" rel="noopener noreferrer" class="ts-sep-btn">
+                  <strong>Verificar en Registro Nacional (SEP)</strong>
+                  <span>
+                    Portal Oficial
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                      <polyline points="15 3 21 3 21 9"></polyline>
+                      <line x1="10" y1="14" x2="21" y2="3"></line>
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Carrusel ancho de instituciones y COFEPRIS -->
+          <div class="ts-logos-wrapper" aria-label="Instituciones que avalan y autorizaciones sanitarias">
+            <div class="ts-logos-header">
+              <p class="ts-logos-label">Respaldo Institucional, Certificación y Autorización Sanitaria</p>
+              <div class="ts-carousel-controls">
+                <button type="button" class="ts-carousel-btn" id="ts-logo-prev" aria-label="Anterior">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                  </svg>
+                </button>
+                <button type="button" class="ts-carousel-btn" id="ts-logo-next" aria-label="Siguiente">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                  </svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="ts-logos-viewport" id="ts-logos-viewport">
+              <div class="ts-logos-track" id="ts-logos-track">
+                <div class="ts-logo-slide">
+                  <img src="assets/logo-unam.png" alt="UNAM" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="ts-logo-placeholder"><strong>UNAM</strong><small>assets/logo-unam.png</small></div>
+                </div>
+                <div class="ts-logo-slide">
+                  <img src="assets/logo-facmed-unam.png" alt="Facultad de Medicina UNAM" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="ts-logo-placeholder"><strong>Facultad de Medicina UNAM</strong><small>assets/logo-facmed-unam.png</small></div>
+                </div>
+                <div class="ts-logo-slide">
+                  <img src="assets/logo-inr.png" alt="Instituto Nacional de Rehabilitación" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="ts-logo-placeholder"><strong>INR "LGII"</strong><small>assets/logo-inr.png</small></div>
+                </div>
+                <div class="ts-logo-slide">
+                  <img src="assets/logo-ipn.png" alt="Instituto Politécnico Nacional" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="ts-logo-placeholder"><strong>IPN</strong><small>assets/logo-ipn.png</small></div>
+                </div>
+                <div class="ts-logo-slide">
+                  <img src="assets/logo-esm-ipn.png" alt="Escuela Superior de Medicina IPN" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="ts-logo-placeholder"><strong>ESM · IPN</strong><small>assets/logo-esm-ipn.png</small></div>
+                </div>
+                <div class="ts-logo-slide">
+                  <img src="assets/logo-cmmr-conacem.png" alt="Consejo Mexicano de Medicina de Rehabilitación - CONACEM" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="ts-logo-placeholder"><strong>CMMR · CONACEM</strong><small>assets/logo-cmmr-conacem.png</small></div>
+                </div>
+                <div class="ts-logo-slide">
+                  <img src="assets/logo-cofepris.png" alt="Autorización COFEPRIS 2612055036B00004" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                  <div class="ts-logo-placeholder"><strong>COFEPRIS · Aviso Vigente</strong><small>assets/logo-cofepris.png</small></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+     <!-- 3. ESTRUCTURA Y VALOR DE LA CONSULTA (SELECTOR INTERACTIVO) -->
+     <section class="ts-structure-section ts-interactive-value" id="beneficios" aria-labelledby="valor-consulta-titulo">
+      <div class="ts-container">
+        <div class="ts-iv-header">
+          <span class="ts-pill ts-pill-green">VALORACIÓN ESPECIALIZADA</span>
+          <h2 id="valor-consulta-titulo" class="ts-iv-title">¿Qué beneficios obtienes al acceder a valoración y seguimiento mediante Telerehabilitación?</h2>
+          <p class="ts-iv-subtitle">
+          </p>
+          <div class="ts-iv-prompt" aria-hidden="true">
+            <span class="ts-iv-pulse"></span>
+            Toca cualquiera de los 9 elementos para ver su imagen y detalle
+          </div>
+        </div>
+
+        <div class="ts-iv-layout" id="ts-iv-root">
+          <div class="ts-iv-tabs" role="tablist" aria-label="Beneficios de la valoración médica">
+            <button type="button" class="ts-iv-tab is-active" role="tab" aria-selected="true" data-index="0">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">1</span>
+                <span class="ts-iv-tab-label">Historia clínica dirigida</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+
+            <button type="button" class="ts-iv-tab" role="tab" aria-selected="false" data-index="1">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">2</span>
+                <span class="ts-iv-tab-label">Exploración física y Evaluación funcional guiada</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+
+            <button type="button" class="ts-iv-tab" role="tab" aria-selected="false" data-index="2">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">3</span>
+                <span class="ts-iv-tab-label">Interpretación de estudios</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+
+            <button type="button" class="ts-iv-tab" role="tab" aria-selected="false" data-index="3">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">4</span>
+                <span class="ts-iv-tab-label">Orientación diagnóstica clara</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+
+            <button type="button" class="ts-iv-tab" role="tab" aria-selected="false" data-index="4">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">5</span>
+                <span class="ts-iv-tab-label">Plan terapéutico y receta</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+
+            <button type="button" class="ts-iv-tab" role="tab" aria-selected="false" data-index="5">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">6</span>
+                <span class="ts-iv-tab-label">Criterio médico honesto</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+
+            <button type="button" class="ts-iv-tab" role="tab" aria-selected="false" data-index="6">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">7</span>
+                <span class="ts-iv-tab-label">Atención a tus dudas</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+
+            <button type="button" class="ts-iv-tab" role="tab" aria-selected="false" data-index="7">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">8</span>
+                <span class="ts-iv-tab-label">Recursos, apoyos y vinculación</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+
+            <button type="button" class="ts-iv-tab" role="tab" aria-selected="false" data-index="8">
+              <span class="ts-iv-tab-left">
+                <span class="ts-iv-tab-num">9</span>
+                <span class="ts-iv-tab-label">Valoración inicial y proceso continuo</span>
+              </span>
+              <span class="ts-iv-tab-cue">Ver detalle ↗</span>
+            </button>
+          </div>
+
+          <div class="ts-iv-viewer" role="tabpanel" id="ts-iv-panel">
+            <div class="ts-iv-media">
+              <img
+                id="ts-iv-img"
+                src="assets/Historia_clínica.png"
+                onerror="if(this.dataset.fallbackDone!=='1'){this.dataset.fallbackDone='1';this.src='assets/Historia_clinica.png';}"
+                alt="Ilustración de historia clínica dirigida en videoconsulta"
+              >
+            </div>
+            <div class="ts-iv-content" id="ts-iv-text-box">
+              <span class="ts-iv-step-tag" id="ts-iv-step">Componente 1 de 9</span>
+              <h3 id="ts-iv-heading">Historia clínica dirigida</h3>
+              <p id="ts-iv-desc">Revisión detallada del motivo y expectativa de la consulta, la evolución de tus síntomas, antecedentes médicos relevantes, si cuentas con estudios realizados, tratamientos previos y/o actuales.</p>
+              <div class="ts-iv-ai-disclaimer">
+                * Imágenes ilustrativas generadas mediante inteligencia artificial con fines exclusivamente orientativos.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- 4. OPINIONES DE PACIENTES (CARRUSEL) -->
+     <section class="ts-reviews-section ts-reviews-carousel-section" id="opiniones" aria-labelledby="opiniones-titulo">
+      <style>
+        .ts-reviews-carousel-section {
+          padding: 76px 0;
+          background: #ffffff;
+        }
+        .ts-reviews-carousel-section .ts-rev-head-row {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 12px;
+          margin-bottom: 34px;
+        }
+        .ts-reviews-carousel-section .ts-rev-head-copy {
+          width: 100%;
+          max-width: 720px;
+          margin: 0 auto;
+          text-align: center;
+        }
+        .ts-reviews-carousel-section .ts-rev-head-copy .ts-pill {
+          display: inline-block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .ts-reviews-carousel-section .ts-rev-head-copy .ts-section-title,
+        .ts-reviews-carousel-section .ts-rev-head-copy .ts-section-subtitle {
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          text-align: center;
+        }
+        .ts-reviews-carousel-section .ts-rev-head-copy .ts-section-title {
+          margin-bottom: 10px;
+        }
+        .ts-reviews-carousel-section .ts-rev-controls {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          margin-top: 4px;
+        }
+        .ts-rev-nav-btn {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          border: 1px solid #dfd5ef;
+          background: #ffffff;
+          color: #4a1f7a;
+          display: grid;
+          place-items: center;
+          cursor: pointer;
+          box-shadow: 0 4px 12px rgba(74, 31, 122, 0.06);
+          transition: all 0.2s ease;
+        }
+        .ts-rev-nav-btn:hover {
+          background: #f3edfa;
+          border-color: #4a1f7a;
+          transform: translateY(-1px);
+        }
+        .ts-rev-viewport {
+          overflow: hidden;
+          width: 100%;
+        }
+        .ts-rev-track {
+          display: flex;
+          gap: 22px;
+          transition: transform 0.42s cubic-bezier(0.25, 1, 0.5, 1);
+          will-change: transform;
+        }
+        .ts-rev-slide {
+          flex: 0 0 calc((100% - 44px) / 3);
+          min-width: 0;
+          background: #faf8fc;
+          border: 1px solid #ebe4f4;
+          border-radius: 20px;
+          padding: 26px 24px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 16px;
+          box-shadow: 0 6px 20px rgba(74, 31, 122, 0.05);
+          transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+        }
+        .ts-rev-slide:hover {
+          background: #ffffff;
+          border-color: #d4c4ec;
+          box-shadow: 0 12px 28px rgba(74, 31, 122, 0.09);
+        }
+        .ts-rev-dots {
+          display: flex;
+          justify-content: center;
+          gap: 8px;
+          margin-top: 24px;
+        }
+        .ts-rev-dot {
+          width: 9px;
+          height: 9px;
+          border-radius: 999px;
+          border: 0;
+          padding: 0;
+          background: #d8cce9;
+          cursor: pointer;
+          transition: width 0.22s ease, background-color 0.22s ease;
+        }
+        .ts-rev-dot.is-active {
+          width: 24px;
+          background: #4a1f7a;
+        }
+        @media (max-width: 960px) {
+          .ts-rev-slide {
+            flex: 0 0 calc((100% - 22px) / 2);
+          }
+        }
+        @media (max-width: 640px) {
+          .ts-rev-slide {
+            flex: 0 0 100%;
+          }
+        }
+      </style>
+
+      <div class="ts-container">
+        <div class="ts-rev-head-row">
+          <div class="ts-rev-head-copy">
+            <span class="ts-pill ts-pill-blue">EXPERIENCIA DE PACIENTES</span>
+            <h2 id="opiniones-titulo" class="ts-section-title">Opiniones sobre la atención médica</h2>
+            <p class="ts-section-subtitle">Lo que comparten quienes han recibido valoración, orientación clínica y ejercicios personalizados.</p>
+          </div>
+
+          <div class="ts-rev-controls" aria-label="Controles del carrusel de opiniones">
+            <button type="button" class="ts-rev-nav-btn" id="ts-rev-prev" aria-label="Opinión anterior">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button type="button" class="ts-rev-nav-btn" id="ts-rev-next" aria-label="Siguiente opinión">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="ts-rev-viewport" id="ts-rev-viewport">
+          <div class="ts-rev-track" id="ts-rev-track">
+            <!-- Reseña 1 -->
+            <article class="ts-rev-slide">
+              <div>
+                <div class="ts-review-top">
+                  <span class="ts-google-stars" aria-label="5 estrellas">★★★★★</span>
+                  <span style="font-size: 11px; font-weight: 700; color: #008b99;">Paciente verificado</span>
+                </div>
+                <p class="ts-review-text" style="margin-top: 12px;">
+                  “Excelente servicio. Explica muy bien, da ejercicios en casa y consejos para evitar problemas futuros. En 3 sesiones se solucionó el dolor de espalda y lumbar con el que llegué.”
+                </p>
+              </div>
+              <div class="ts-review-author">
+                <div class="ts-review-avatar">R</div>
+                <div>
+                  <strong>RIE</strong>
+                  <span>Valoración en Medicina de Rehabilitación</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Reseña 2 -->
+            <article class="ts-rev-slide">
+              <div>
+                <div class="ts-review-top">
+                  <span class="ts-google-stars" aria-label="5 estrellas">★★★★★</span>
+                  <span style="font-size: 11px; font-weight: 700; color: #008b99;">Paciente verificado</span>
+                </div>
+                <p class="ts-review-text" style="margin-top: 12px;">
+                  “Excelente doctora. Explica bien detallado, indica los pasos a seguir en el tratamiento y está paso a paso en tu recuperación.”
+                </p>
+              </div>
+              <div class="ts-review-author">
+                <div class="ts-review-avatar">MA</div>
+                <div>
+                  <strong>Mirna A. H.M.</strong>
+                  <span>Valoración en Medicina de Rehabilitación</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Reseña 3 -->
+            <article class="ts-rev-slide">
+              <div>
+                <div class="ts-review-top">
+                  <span class="ts-google-stars" aria-label="5 estrellas">★★★★★</span>
+                  <span style="font-size: 11px; font-weight: 700; color: #008b99;">Paciente verificado</span>
+                </div>
+                <p class="ts-review-text" style="margin-top: 12px;">
+                  “Muy buena la doctora, la verdad me atendió muy bien, es paciente, me explicaba detalladamente cada cosa y es puntual con sus tiempos.”
+                </p>
+              </div>
+              <div class="ts-review-author">
+                <div class="ts-review-avatar">F</div>
+                <div>
+                  <strong>Fernanda</strong>
+                  <span>Valoración en Medicina de Rehabilitación</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Reseña 4 -->
+            <article class="ts-rev-slide">
+              <div>
+                <div class="ts-review-top">
+                  <span class="ts-google-stars" aria-label="5 estrellas">★★★★★</span>
+                  <span style="font-size: 11px; font-weight: 700; color: #008b99;">Paciente verificado</span>
+                </div>
+                <p class="ts-review-text" style="margin-top: 12px;">
+                  “Me gustó mucho la consulta, ya que el diagnóstico fue muy certero; la doctora fue muy amable, cálida, empática y profesional, demostrando amplio conocimiento.”
+                </p>
+              </div>
+              <div class="ts-review-author">
+                <div class="ts-review-avatar">MG</div>
+                <div>
+                  <strong>Monserrat Gómez</strong>
+                  <span>Consulta en línea</span>
+                </div>
+              </div>
+            </article>
+
+            <!-- Reseña 5 -->
+            <article class="ts-rev-slide">
+              <div>
+                <div class="ts-review-top">
+                  <span class="ts-google-stars" aria-label="5 estrellas">★★★★★</span>
+                  <span style="font-size: 11px; font-weight: 700; color: #008b99;">Paciente verificado</span>
+                </div>
+                <p class="ts-review-text" style="margin-top: 12px;">
+                  “Exploración muy detallada, paciencia para responder preguntas y enfoque gradual.”
+                </p>
+              </div>
+              <div class="ts-review-author">
+                <div class="ts-review-avatar">RC</div>
+                <div>
+                  <strong>Rodrigo A. Camacho</strong>
+                  <span>Valoración en Medicina de Rehabilitación</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="ts-rev-dots" id="ts-rev-dots" aria-label="Paginación de opiniones"></div>
+      </div>
+
+      <script>
+        (function () {
+          const track = document.getElementById('ts-rev-track');
+          const viewport = document.getElementById('ts-rev-viewport');
+          const prevBtn = document.getElementById('ts-rev-prev');
+          const nextBtn = document.getElementById('ts-rev-next');
+          const dotsWrap = document.getElementById('ts-rev-dots');
+          if (!track || !viewport) return;
+
+          const slides = Array.from(track.querySelectorAll('.ts-rev-slide'));
+          let index = 0;
+          let timer = null;
+
+          function perView() {
+            if (window.innerWidth <= 640) return 1;
+            if (window.innerWidth <= 960) return 2;
+            return 3;
+          }
+
+          function maxIdx() {
+            return Math.max(0, slides.length - perView());
+          }
+
+          function renderDots() {
+            if (!dotsWrap) return;
+            const total = maxIdx() + 1;
+            dotsWrap.innerHTML = '';
+            for (let i = 0; i < total; i++) {
+              const dot = document.createElement('button');
+              dot.type = 'button';
+              dot.className = 'ts-rev-dot' + (i === index ? ' is-active' : '');
+              dot.setAttribute('aria-label', 'Ir a grupo de opiniones ' + (i + 1));
+              dot.addEventListener('click', () => {
+                index = i;
+                update();
+              });
+              dotsWrap.appendChild(dot);
+            }
+          }
+
+          function update() {
+            if (!slides.length) return;
+            const limit = maxIdx();
+            if (index > limit) index = 0;
+            if (index < 0) index = limit;
+            const step = slides[0].getBoundingClientRect().width + 22;
+            track.style.transform = 'translateX(-' + (index * step) + 'px)';
+            renderDots();
+          }
+
+          function start() {
+            stop();
+            timer = setInterval(() => {
+              index++;
+              update();
+            }, 4500);
+          }
+
+          function stop() {
+            if (timer) clearInterval(timer);
+          }
+
+          if (prevBtn) prevBtn.addEventListener('click', () => { index--; update(); });
+          if (nextBtn) nextBtn.addEventListener('click', () => { index++; update(); });
+          viewport.addEventListener('mouseenter', stop);
+          viewport.addEventListener('mouseleave', start);
+          window.addEventListener('resize', update);
+
+          update();
+          start();
+        })();
+      </script>
+    </section>
+
+   <!-- 2. CÓMO FUNCIONA TELESALUD (3 PASOS + CUADRO DE ACCESO A AGENDA) -->
+   <section class="ts-flow-section" id="como-funciona" aria-labelledby="como-funciona-titulo">
+    <style>
+      #como-funciona {
+        position: relative;
+        padding: 76px 0;
+        background:
+          radial-gradient(circle at 12% 10%, rgba(74, 31, 122, 0.06), transparent 36%),
+          radial-gradient(circle at 88% 85%, rgba(0, 139, 153, 0.08), transparent 40%),
+          linear-gradient(180deg, #faf7fd 0%, #f1f9fa 100%);
+      }
+      #como-funciona .ts-flow-header {
+        text-align: center;
+        max-width: 720px;
+        margin: 0 auto 46px;
+      }
+      #como-funciona .ts-flow-pill {
+        display: inline-block;
+        background: #e0f7fa;
+        color: #00798c;
+        border: 1px solid #b8e8ee;
+        font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        padding: 6px 16px;
+        border-radius: 999px;
+        margin-bottom: 14px;
+        box-shadow: 0 3px 10px rgba(0, 121, 140, 0.08);
+      }
+      #como-funciona .ts-flow-header h2 {
+        font-size: clamp(1.8rem, 3.2vw, 2.35rem);
+        color: #4a1f7a;
+        margin: 0 0 12px;
+        line-height: 1.2;
+      }
+      #como-funciona .ts-flow-header p {
+        color: #4b5563;
+        font-size: 1.05rem;
+        margin: 0;
+        line-height: 1.6;
+      }
+      #como-funciona .ts-flow-grid-4 {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 22px;
+        align-items: stretch;
+      }
+      #como-funciona .ts-flow-step {
+        position: relative;
+        background: #ffffff;
+        border: 1px solid #dfd5ef;
+        border-radius: 22px;
+        padding: 22px 18px 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        box-shadow:
+          0 10px 24px rgba(74, 31, 122, 0.06),
+          0 2px 6px rgba(0, 139, 153, 0.04);
+        transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+        overflow: hidden;
+      }
+      #como-funciona .ts-flow-step::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, #4a1f7a, #008b99);
+        opacity: 0.85;
+      }
+      #como-funciona .ts-flow-step:hover {
+        transform: translateY(-5px);
+        border-color: #b79ce0;
+        box-shadow:
+          0 16px 32px rgba(74, 31, 122, 0.11),
+          0 4px 10px rgba(0, 139, 153, 0.08);
+      }
+      #como-funciona .ts-flow-badge {
+        display: inline-flex;
+        align-items: center;
+        background: #f3edfa;
+        color: #4a1f7a;
+        border: 1px solid #e2d5f5;
+        font-size: 0.74rem;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border-radius: 999px;
+        margin-bottom: 14px;
+      }
+      #como-funciona .ts-flow-step:nth-child(2) .ts-flow-badge {
+        background: #e3f6f8;
+        color: #00798c;
+        border-color: #c2eaee;
+      }
+      #como-funciona .ts-flow-img-box {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        background: linear-gradient(180deg, #fbf9fe 0%, #f2f8fa 100%);
+        border: 1px solid #e6dff2;
+        border-radius: 14px;
+        margin-bottom: 16px;
+        overflow: hidden;
+        box-shadow: inset 0 1px 3px rgba(74, 31, 122, 0.05);
+      }
+      #como-funciona .ts-flow-img-box img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      #como-funciona .ts-flow-step h3 {
+        font-size: 1.08rem;
+        font-weight: 700;
+        color: #4a1f7a;
+        margin: 0 0 8px;
+        line-height: 1.3;
+      }
+      #como-funciona .ts-flow-step p {
+        font-size: 0.9rem;
+        color: #4b5563;
+        line-height: 1.56;
+        margin: 0;
+      }
+
+      /* 4.º cuadro: imagen a pantalla completa con respaldo limpio */
+      a.ts-flow-agenda-card {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        background:
+          radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.16), transparent 45%),
+          linear-gradient(155deg, #008b99 0%, #2a5b8a 46%, #4a1f7a 100%);
+        border: 1px solid #dfd5ef;
+        border-radius: 22px;
+        text-decoration: none;
+        overflow: hidden;
+        box-shadow:
+          0 12px 26px rgba(74, 31, 122, 0.09),
+          0 2px 6px rgba(0, 139, 153, 0.05);
+        transition: transform 0.22s ease, box-shadow 0.22s ease, border-color 0.22s ease;
+      }
+      a.ts-flow-agenda-card:hover {
+        transform: translateY(-5px);
+        border-color: #4a1f7a;
+        box-shadow: 0 18px 34px rgba(74, 31, 122, 0.16);
+      }
+      a.ts-flow-agenda-card img {
+        position: relative;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+      }
+      .ts-flow-agenda-fallback {
+        position: absolute;
+        inset: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 24px 18px;
+        text-align: center;
+        color: #ffffff;
+      }
+      .ts-flow-agenda-fallback strong {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+      .ts-flow-agenda-fallback span {
+        display: inline-block;
+        padding: 9px 18px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.7);
+        font-size: 0.88rem;
+        font-weight: 700;
+      }
+
+      @media (max-width: 1024px) {
+        #como-funciona .ts-flow-grid-4 {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+        a.ts-flow-agenda-card {
+          min-height: 300px;
+        }
+      }
+      @media (max-width: 600px) {
+        #como-funciona .ts-flow-grid-4 {
+          grid-template-columns: 1fr;
+        }
+        a.ts-flow-agenda-card {
+          min-height: 340px;
+        }
+      }
+    </style>
+
+    <div class="ts-container">
+      <div class="ts-flow-header">
+        <span class="ts-flow-pill">Proceso sencillo y seguro</span>
+        <h2 id="como-funciona-titulo">Agendar una cita es muy sencillo</h2>
+        </div>
+
+      <div class="ts-flow-grid-4">
+        <article class="ts-flow-step">
+          <span class="ts-flow-badge">Paso 1</span>
+          <div class="ts-flow-img-box">
+            <img
+              src="assets/Elige.png"
+              data-fallbacks="assets/Elige.jpg"
+              onerror="(function(img){var list=(img.dataset.fallbacks||'').split(',').filter(Boolean);var i=parseInt(img.dataset.fbIdx||'0',10);if(i<list.length){img.dataset.fbIdx=String(i+1);img.src=list[i];}})(this)"
+              alt="Paso 1"
+              loading="lazy"
+            >
+          </div>
+          <h3>Elige tu horario</h3>
+          <p>Selecciona en el calendario en tiempo real el día y la hora disponibles que mejor se adapten a ti.</p>
+        </article>
+
+        <article class="ts-flow-step">
+          <span class="ts-flow-badge">Paso 2</span>
+          <div class="ts-flow-img-box">
+            <img
+              src="assets/Realiza_pago.png"
+              data-fallbacks="assets/Realiza_pago.jpg"
+              onerror="(function(img){var list=(img.dataset.fallbacks||'').split(',').filter(Boolean);var i=parseInt(img.dataset.fbIdx||'0',10);if(i<list.length){img.dataset.fbIdx=String(i+1);img.src=list[i];}})(this)"
+              alt="Paso 2"
+              loading="lazy"
+            >
+          </div>
+          <h3>Realiza tu pago</h3>
+          <p>Al realizar tu pago en línea, estás asegurando el horario que elegiste.</p>
+        </article>
+
+        <article class="ts-flow-step">
+          <span class="ts-flow-badge">Paso 3</span>
+          <div class="ts-flow-img-box">
+            <img
+              src="assets/Conectate.png"
+              data-fallbacks="assets/Conectate.jpg"
+              onerror="(function(img){var list=(img.dataset.fallbacks||'').split(',').filter(Boolean);var i=parseInt(img.dataset.fbIdx||'0',10);if(i<list.length){img.dataset.fbIdx=String(i+1);img.src=list[i];}})(this)"
+              alt="Paso 3"
+              loading="lazy"
+            >
+          </div>
+          <h3>Conéctate a tu cita</h3>
+          <p>Recibe automáticamente en tu correo el enlace directo y las instrucciones para ingresar a tu videollamada.</p>
+        </article>
+
+        <a href="#agenda" class="ts-flow-agenda-card" aria-label="Ir a la agenda">
+          <img
+            src="assets/agenda.png"
+            data-fallbacks="assets/agenda.png,assets/ageda.png,assets/agenda.png"
+            onerror="(function(img){var list=(img.dataset.fallbacks||'').split(',').filter(Boolean);var i=parseInt(img.dataset.fbIdx||'0',10);if(i<list.length){img.dataset.fbIdx=String(i+1);img.src=list[i];}else{img.style.display='none';}})(this)"
+            alt=""
+          >
+          <div class="ts-flow-agenda-fallback">
+            <strong>Tu función es importante</strong>
+            <span>Agenda tu videoconsulta ↓</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+   <!-- 5. BLOQUE DE AGENDA (#agenda) -->
+   <section class="booking-section" id="agenda">
+    <style>
+      #agenda .booking-consent {
+        display: flex;
+        flex-direction: column;
+      }
+
+      #agenda .booking-alert {
+        margin-top: 16px;
+        padding: 13px 16px;
+        border-radius: 12px;
+        border: 1px solid #d5c4ec;
+        background: #f5effc;
+        color: #4a1f7a;
+        font-size: 0.95rem;
+        font-weight: 600;
+        line-height: 1.45;
+      }
+
+      #agenda .booking-action {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        width: fit-content;
+        min-width: 280px;
+        max-width: 100%;
+        min-height: 62px;
+        margin: 22px auto 6px;
+        padding: 16px 40px;
+        border: 1px solid rgba(255, 255, 255, 0.45);
+        border-radius: 16px;
+        font-family: inherit;
+        font-style: normal;
+        font-size: 1.16rem;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        line-height: 1.2;
+        text-align: center;
+        color: #ffffff;
+        text-shadow: 0 1px 2px rgba(124, 45, 18, 0.35);
+        cursor: pointer;
+        background:
+          linear-gradient(180deg, rgba(255, 255, 255, 0.28) 0%, rgba(255, 255, 255, 0.04) 50%, rgba(124, 45, 18, 0.14) 100%),
+          linear-gradient(135deg, #f59e0b 0%, #ea580c 58%, #c2410c 100%);
+        box-shadow:
+          inset 0 1px 1px rgba(255, 255, 255, 0.65),
+          0 12px 26px rgba(234, 88, 12, 0.28);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+      }
+
+      #agenda .booking-action:hover:not(:disabled) {
+        transform: translateY(-2px);
+        filter: brightness(1.04);
+        box-shadow:
+          inset 0 1px 1px rgba(255, 255, 255, 0.8),
+          0 16px 32px rgba(234, 88, 12, 0.36);
+      }
+
+      #agenda .booking-action:active:not(:disabled) {
+        transform: translateY(0);
+      }
+
+      @media (max-width: 520px) {
+        #agenda .booking-action {
+          align-self: stretch;
+          width: 100%;
+          min-width: 0;
+          min-height: 58px;
+          padding: 15px 24px;
+          font-size: 1.1rem;
+        }
+      }
+    </style>
+
+    <div class="container">
+      <div class="booking-panel">
+        <div class="booking-aside">
+          <p class="aside-tag">Agenda en línea</p>
+          <h2>Tu valoración, a tu ritmo.</h2>
+          <p>Conversa con calma sobre tu motivo de consulta y da el primer paso hacia tu bienestar funcional.</p>
+
+          <div class="booking-price" aria-label="450 pesos mexicanos, 55 minutos">
+            <strong>$450</strong><span>MXN · 55 minutos</span>
+          </div>
+
+          <ul class="booking-facts">
+            <li>Valoración especializada en Medicina de Rehabilitación</li>
+            <li>Adultos y pacientes pediátricos</li>
+            <li>Atención con paciente en México</li>
+            <li>Videoconsulta individual</li>
+          </ul>
+
+          <div class="booking-aside-creds">
+            <strong>Dra. Erika Abarca Ortega</strong><br>
+            Céd. Esp. Rehabilitación: 14317149 · CONACEM<br>
+            Aviso COFEPRIS: 2612055036B00004
+          </div>
+        </div>
+
+        <div class="booking-consent">
+          <div class="agenda-lead-banner">
+            <div>
+              <h3>¡Tu recuperación inicia hoy!</h3>
+              <p>Por tu seguridad clínica y la protección de tus datos, confirma la lectura de los siguientes documentos.</p>
+            </div>
+            <span class="agenda-down-indicator" aria-hidden="true">↓</span>
+          </div>
+
+          <div class="consent-list">
+            <label class="consent-item">
+              <input type="checkbox" class="consent-check" id="chk-terminos">
+              <span>Declaro haber leído, comprendido y aceptado los <a href="terminos.html" target="_blank" rel="noopener">Términos y Condiciones</a> del servicio.</span>
+            </label>
+
+            <label class="consent-item">
+              <input type="checkbox" class="consent-check" id="chk-privacidad">
+              <span>Declaro haber leído el <a href="privacidad.html" target="_blank" rel="noopener">Aviso de Privacidad Integral</a> y otorgo mi consentimiento expreso para el tratamiento de mis datos de salud conforme a lo explicado allí.</span>
+            </label>
+
+            <label class="consent-item">
+              <input type="checkbox" class="consent-check" id="chk-consentimiento">
+              <span>Declaro haber leído y comprendido el <a href="consentimiento-telesalud.html" target="_blank" rel="noopener">Consentimiento informado para atención médica en línea</a>, confirmando que el paciente se encuentra físicamente en México.</span>
+            </label>
+          </div>
+
+          <div class="registro-firma-panel" id="registro-firma-panel">
+            <div class="registro-grid">
+              <div class="pediatric-toggle-box">
+                <label class="pediatric-toggle-label" for="chk-pediatrico">
+                  <input type="checkbox" id="chk-pediatrico">
+                  <span>Si la cita es para un menor de 18 años, por favor selecciona esta casilla y coloca nombre y apellidos del padre o tutor legal.</span>
+                </label>
+                <div class="tutor-wrapper" id="tutor-wrapper">
+                  <div class="registro-field">
+                    <label for="input-tutor">Nombre y apellidos del padre, madre o tutor legal *</label>
+                    <input type="text" id="input-tutor" class="registro-input" placeholder="Nombre y apellidos del padre o tutor legal">
+                  </div>
+                </div>
+              </div>
+
+              <div class="registro-field registro-full">
+                <label for="input-paciente">Nombre completo del paciente *</label>
+                <input type="text" id="input-paciente" class="registro-input" placeholder="Nombre y apellidos">
+              </div>
+
+              <div class="registro-field">
+                <label for="input-edad">Edad *</label>
+                <input type="number" id="input-edad" class="registro-input" min="0" max="115" placeholder="Ej. 35">
+              </div>
+
+              <div class="registro-field">
+                <label for="input-telefono">Teléfono / WhatsApp *</label>
+                <input type="tel" id="input-telefono" class="registro-input" placeholder="Ej. 747 123 4567">
+              </div>
+
+              <div class="registro-field registro-full">
+                <label for="input-email">Correo electrónico (usa este mismo correo al elegir horario) *</label>
+                <input type="email" id="input-email" class="registro-input" placeholder="correo@ejemplo.com">
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-alert" id="booking-alert" role="status">
+            Para continuar, lee los documentos correspondientes, marca cada casilla de aceptación y sigue las instrucciones.
+          </div>
+
+          <button type="button" class="booking-action" id="btn-registrar-agendar">
+            Ir a la agenda
+          </button>
+
+          <p class="booking-note">
+            Al continuar pasarás al calendario para elegir horario y realizar el pago. Esta consulta no atiende urgencias;
+            ante una emergencia llama al 911 o acude al servicio de urgencias más cercano.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+      <section class="faq-section" id="preguntas">
+        <div class="container">
+          <div class="section-heading">
+            <p class="eyebrow">Respuestas claras</p>
+            <h2 class="section-title">Preguntas frecuentes</h2>
+          </div>
+
+          <div class="faq-list">
+            <details>
+              <summary>¿La videoconsulta sustituye una consulta presencial?</summary>
+              <p>No siempre. La valoración por video tiene límites; si se requiere una exploración presencial u otro tipo de atención, se te orientará durante la consulta.</p>
+            </details>
+            <details>
+              <summary>¿Puedo solicitar una cita para una persona menor de edad?</summary>
+              <p>Sí. La cita debe gestionarla y acompañar la consulta la madre, el padre o la persona representante legal, acreditando su identidad y aceptando los lineamientos en el apartado de reserva.</p>
+            </details>
+            <details>
+              <summary>¿Qué hago si tengo una urgencia médica?</summary>
+              <p>Esta agenda no es un servicio de urgencias. Llama al 911 o acude al servicio de urgencias más cercano.</p>
+            </details>
+            <details>
+              <summary>¿Cómo puedo hacer una pregunta sobre mi cita?</summary>
+              <p>Escríbeme por WhatsApp o al correo de contacto. Evita enviar información médica sensible por esos medios.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img alt="Logo Dra. Erika Abarca" class="footer-logo" src="assets/logo.png">
+        <p>
+          Medicina de Rehabilitación con enfoque clínico, funcional y educativo para mejorar movilidad,
+          independencia y calidad de vida.
+        </p>
+      </div>
+
+      <div class="footer-links-col">
+        <h3>Explora</h3>
+        <ul class="list-clean footer-list">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="servicios.html">Servicios</a></li>
+          <li><a href="recursos.html">Recursos</a></li>
+          <li><a href="faq.html">Preguntas frecuentes</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          <li><a href="telesalud.html">Telesalud</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social-col">
+        <h3>Sígueme</h3>
+        <div aria-label="Redes sociales" class="social-icons">
+          <a aria-label="Instagram" href="https://www.instagram.com/draerikaabarca/" rel="noopener" target="_blank" title="Instagram">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3v10a3 3 0 0 0 3 3h10a3 3 0 0 0 3-3V7a3 3 0 0 0-3-3H7m5 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5m0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5m5.25-3.1a1.1 1.1 0 1 1-1.1 1.1 1.1 1.1 0 0 1 1.1-1.1" fill="currentColor"></path>
+            </svg>
+          </a>
+          <a aria-label="YouTube" href="https://www.youtube.com/@DraErikaAbarca" rel="noopener" target="_blank" title="YouTube">
+            <img alt="" src="assets/icon-youtube.png">
+          </a>
+          <a aria-label="Facebook" href="https://www.facebook.com/profile.php?id=61566170162960" rel="noopener" target="_blank" title="Facebook">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M13.5 22v-8h2.7l.4-3h-3.1V9.1c0-.9.3-1.6 1.6-1.6H17V4.8c-.4-.1-1.3-.2-2.4-.2-2.4 0-4.1 1.5-4.1 4.3V11H8v3h2.5v8h3z" fill="currentColor"></path>
+            </svg>
+          </a>
+          <a aria-label="LinkedIn" href="https://www.linkedin.com/in/erika-a-06923710b/" rel="noopener" target="_blank" title="LinkedIn">
+            <svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M6.94 8.5H4V20h2.94zM5.47 4A1.72 1.72 0 1 0 5.5 7.44 1.72 1.72 0 0 0 5.47 4M20 13.36C20 10.38 18.4 9 16.25 9a3.72 3.72 0 0 0-3.3 1.81V9.29H10V20h2.94v-5.94c0-1.56.29-3.06 2.22-3.06 1.91 0 1.94 1.79 1.94 3.16V20H20z" fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <p class="legal-links">
+          <a href="terminos.html">Términos y condiciones</a> ·
+          <a href="privacidad.html">Política de privacidad</a>
+        </p>
+        <p class="copyright">© 2026 Dra. Erika Abarca. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/527474794425?text=Hola,%20me%20gustar%C3%ADa%20solicitar%20informaci%C3%B3n%20para%20una%20valoraci%C3%B3n%20en%20Medicina%20de%20Rehabilitaci%C3%B3n." target="_blank" rel="noopener" aria-label="WhatsApp">
+    <img src="assets/icon-whatsapp.png" alt="">
+  </a>
+
+  <script>
+    (function () {
+      /* =========================================================================
+         1. CARRUSEL DE LOGOTIPOS (VELOCIDAD LIGERAMENTE MÁS ÁGIL)
+         ========================================================================= */
+      const track = document.getElementById('ts-logos-track');
+      const viewport = document.getElementById('ts-logos-viewport');
+      const prevBtn = document.getElementById('ts-logo-prev');
+      const nextBtn = document.getElementById('ts-logo-next');
+      let carouselIndex = 0;
+      let autoplayTimer = null;
+
+      function getVisibleSlides() {
+        if (window.innerWidth <= 640) return 2;
+        if (window.innerWidth <= 960) return 3;
+        return 4;
+      }
+
+      function updateCarousel() {
+        if (!track) return;
+        const slides = track.querySelectorAll('.ts-logo-slide');
+        if (!slides.length) return;
+        const visible = getVisibleSlides();
+        const maxIndex = Math.max(0, slides.length - visible);
+        if (carouselIndex > maxIndex) carouselIndex = 0;
+        if (carouselIndex < 0) carouselIndex = maxIndex;
+        const slideWidth = slides[0].getBoundingClientRect().width + 20;
+        track.style.transform = `translateX(-${carouselIndex * slideWidth}px)`;
+      }
+
+      function startAutoplay() {
+        if (autoplayTimer) clearInterval(autoplayTimer);
+        autoplayTimer = setInterval(() => {
+          carouselIndex++;
+          updateCarousel();
+        }, 2300);
+      }
+
+      if (prevBtn && nextBtn && viewport) {
+        prevBtn.addEventListener('click', () => { carouselIndex--; updateCarousel(); });
+        nextBtn.addEventListener('click', () => { carouselIndex++; updateCarousel(); });
+        viewport.addEventListener('mouseenter', () => clearInterval(autoplayTimer));
+        viewport.addEventListener('mouseleave', startAutoplay);
+        window.addEventListener('resize', updateCarousel);
+        startAutoplay();
+      }
+
+      /* =========================================================================
+         2. PESTAÑAS INTERACTIVAS DE BENEFICIOS
+         ========================================================================= */
+         const benefitItems = [
+        {
+          step: "Componente 1 de 9",
+          title: "Historia clínica dirigida",
+          desc: "Revisión detallada del motivo y expectativa de la consulta, la evolución de tus síntomas, antecedentes médicos relevantes, si cuentas con estudios realizados, tratamientos previos y/o actuales.",
+          img: "assets/Historia_clínica.png",
+          alt: "Ilustración de historia clínica dirigida en videoconsulta"
+        },
+        {
+          step: "Componente 2 de 9",
+          title: "Exploración física y evaluación funcional guiada",
+          desc: "Observación sistematizada en tiempo real para explorar anatomía y función del área afectada y zonas involucradas, por ejemplo, de tu postura, movilidad, marcha y pruebas físicas seguras adaptadas a la modalidad a distancia.",
+          img: "assets/Evaluacion_funcional.png",
+          alt: "Ilustración de evaluación funcional y postura a distancia"
+        },
+        {
+          step: "Componente 3 de 9",
+          title: "Interpretación de estudios",
+          desc: "Análisis médico especializado de tus laboratorios, radiografías, resonancias, ultrasonidos, electromiografías, potenciales evocados u otros estudios de electrodiagnóstico o de imagen que tengas disponibles.",
+          img: "assets/Interpretacion_estudios.png",
+          alt: "Ilustración de revisión médica de estudios de imagen y laboratorio"
+        },
+        {
+          step: "Componente 4 de 9",
+          title: "Orientación diagnóstica clara",
+          desc: "Explicación comprensible sobre el origen clínico de tus molestias y tu panorama funcional, siempre que la valoración a distancia lo permita.",
+          img: "assets/Orientacion.png",
+          alt: "Ilustración de explicación médica y orientación diagnóstica clara"
+        },
+        {
+          step: "Componente 5 de 9",
+          title: "Plan terapéutico y receta",
+          desc: "Entrega por escrito de tu programa individualizado de ejercicio terapéutico, indicaciones prácticas y, cuando proceda, receta médica electrónica.",
+          img: "assets/Plan_terapeutico.png",
+          alt: "Ilustración de entrega de plan terapéutico individualizado y receta"
+        },
+        {
+          step: "Componente 6 de 9",
+          title: "Criterio médico honesto",
+          desc: "Definición oportuna y transparente sobre la necesidad de estudios complementarios o de acudir a una valoración física presencial.",
+          img: "assets/Criterio_medico.png",
+          alt: "Ilustración de criterio médico sobre estudios complementarios o valoración presencial"
+        },
+        {
+          step: "Componente 7 de 9",
+          title: "Atención a tus dudas",
+          desc: "Contarás atención para escucharte con calma, acompañarte paso a paso y aclarar tus inquietudes sobre el diagnóstico y tratamiento.",
+          img: "assets/Dudas.png",
+          alt: "Ilustración de atención médica cercana y resolución de dudas en videoconsulta"
+        },
+        {
+          step: "Componente 8 de 9",
+          title: "Recursos, apoyos y vinculación",
+          desc: "Orientación sobre el uso de tecnología de rehabilitación para uso doméstico, dispositivos de ayuda, redes de apoyo sociales, gubernamentales y no gubernamentales, canalización a áreas o especialidades afines a resolver un proceso específico.",
+          img: "assets/beneficio_8_recursos.png",
+          alt: "Ilustración de recursos domésticos, dispositivos de ayuda, redes de apoyo y especialistas afines"
+        },
+        {
+          step: "Componente 9 de 9",
+          title: "Valoración inicial y proceso continuo",
+          desc: "La rehabilitación es un proceso continuo con consultas de seguimiento dirigidas a evaluar el avance de tus síntomas, ganancia de funcionalidad, valorar resultados de laboratorio o estudios solicitados, valorar oportunidades de mejora, asesorar de forma personalizada el proceso terapéutico, los ejercicios y la enseñanza en el uso de otras herramientas o dispositivos de ayuda, etc.",
+          img: "assets/beneficio_9_proceso.png",
+          alt: "Ilustración de valoración inicial y seguimiento continuo en el proceso de rehabilitación"
+        }
+      ];
+
+      const ivRoot = document.getElementById('ts-iv-root');
+      const ivImg = document.getElementById('ts-iv-img');
+      const ivStep = document.getElementById('ts-iv-step');
+      const ivHeading = document.getElementById('ts-iv-heading');
+      const ivDesc = document.getElementById('ts-iv-desc');
+      const ivTextBox = document.getElementById('ts-iv-text-box');
+
+      if (ivRoot && ivImg && ivStep && ivHeading && ivDesc) {
+        const tabs = ivRoot.querySelectorAll('.ts-iv-tab');
+        ivRoot.addEventListener('click', (event) => {
+          const btn = event.target.closest('.ts-iv-tab');
+          if (!btn) return;
+          const idx = parseInt(btn.getAttribute('data-index'), 10);
+          const data = benefitItems[idx];
+          if (!data) return;
+
+          tabs.forEach((tab, i) => {
+            const active = i === idx;
+            tab.classList.toggle('is-active', active);
+            tab.setAttribute('aria-selected', active ? 'true' : 'false');
+          });
+
+          ivImg.classList.remove('ts-iv-fade');
+          if (ivTextBox) ivTextBox.classList.remove('ts-iv-fade');
+          void ivImg.offsetWidth;
+
+          ivImg.dataset.fallbackDone = '';
+          ivImg.src = data.img;
+          ivImg.alt = data.alt;
+          ivStep.textContent = data.step;
+          ivHeading.textContent = data.title;
+          ivDesc.textContent = data.desc;
+
+          ivImg.classList.add('ts-iv-fade');
+          if (ivTextBox) ivTextBox.classList.add('ts-iv-fade');
+        });
+      }
+
+      /* =========================================================================
+         3. CONEXIÓN A GOOGLE WORKSPACE + REDIRECCIÓN A AGENDA
+         ========================================================================= */
+      const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxA5XoQtz059E5YvN3DBrkisVcYBevgnPcSbPU3Wd2Iv8ZBXeMxXOje16YmHd7mh8QH/exec';
+      const GOOGLE_CALENDAR_BOOKING_URL = 'https://calendar.app.google/QXvPGUATxLMycFf87';
+
+      const docChecks = document.querySelectorAll('.consent-list .consent-check');
+      const chkIdentidad = document.getElementById('chk-identidad');
+      const panel = document.getElementById('registro-firma-panel');
+      const btnAction = document.getElementById('btn-registrar-agendar');
+      const alertBox = document.getElementById('booking-alert');
+      const chkPed = document.getElementById('chk-pediatrico');
+      const tutorWrap = document.getElementById('tutor-wrapper');
+
+      function showNotice(msg) {
+        if (!alertBox) return;
+        alertBox.textContent = msg;
+        alertBox.classList.add('is-visible');
+      }
+
+      function hideNotice() {
+        if (!alertBox) return;
+        alertBox.classList.remove('is-visible');
+      }
+
+      function updateConsentState() {
+        hideNotice();
+        const allDocsChecked = Array.from(docChecks).every(c => c.checked);
+        if (allDocsChecked && panel) {
+          panel.classList.add('is-visible');
+        } else if (panel) {
+          panel.classList.remove('is-visible');
+        }
+      }
+
+      docChecks.forEach(chk => chk.addEventListener('change', updateConsentState));
+      if (chkIdentidad) chkIdentidad.addEventListener('change', hideNotice);
+
+      if (chkPed && tutorWrap) {
+        chkPed.addEventListener('change', () => {
+          hideNotice();
+          if (chkPed.checked) {
+            tutorWrap.classList.add('is-visible');
+          } else {
+            tutorWrap.classList.remove('is-visible');
+          }
+        });
+      }
+
+      if (btnAction) {
+        btnAction.addEventListener('click', async () => {
+          const allDocsChecked = Array.from(docChecks).every(c => c.checked);
+          if (!allDocsChecked) {
+            showNotice('Para continuar, lee los documentos correspondientes, marca cada casilla de aceptación y sigue las instrucciones.');
+            return;
+          }
+
+          const paciente = document.getElementById('input-paciente').value.trim();
+          const edad = document.getElementById('input-edad').value.trim();
+          const telefono = document.getElementById('input-telefono').value.trim();
+          const email = document.getElementById('input-email').value.trim();
+          const esPed = chkPed ? chkPed.checked : false;
+          const tutor = esPed ? document.getElementById('input-tutor').value.trim() : 'No aplica (Paciente adulto)';
+
+          if (esPed && !tutor) {
+            showNotice('Por favor ingresa el nombre y apellidos del padre, madre o tutor legal.');
+            return;
+          }
+          if (!paciente || !edad || !telefono || !email) {
+            showNotice('Por favor completa todos los campos obligatorios (*) antes de ir a la agenda.');
+            return;
+          }
+          if (!chkIdentidad || !chkIdentidad.checked) {
+            showNotice('Por favor confirma la verificación de datos e identidad al inicio de la videollamada.');
+            return;
+          }
+
+          hideNotice();
+          btnAction.disabled = true;
+          btnAction.textContent = 'Abriendo agenda...';
+
+          const folio = 'TR-' + Date.now().toString().slice(-6);
+          const payload = {
+            folio: folio,
+            fechaRegistro: new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' }),
+            servicio: 'Telerehabilitación (Medicina de Rehabilitación)',
+            paciente: paciente,
+            edad: edad,
+            telefono: telefono,
+            email: email,
+            esPediatrico: esPed ? 'Sí' : 'No',
+            tutorLegal: tutor,
+            firmaBase64: ''
+          };
+
+          try {
+            if (GOOGLE_SCRIPT_URL && GOOGLE_SCRIPT_URL.startsWith('https://script.google.com/')) {
+              await fetch(GOOGLE_SCRIPT_URL, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify(payload)
+              });
+            }
+          } catch (err) {
+            console.warn('Aviso al registrar aceptación:', err);
+          }
+
+          window.location.href = GOOGLE_CALENDAR_BOOKING_URL;
+        });
+      }
+    })();
+  </script>
+  <script src="script.js"></script>
+  <script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "https://platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
+</body>
+</html>

@@ -236,7 +236,7 @@ h1, .page-hero h1, .section-title {
 .guidance-card p{margin:0;color:var(--text)}
 @media (max-width:920px){.doc-thumb{min-height:150px}}
 
-.pdf-thumb img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.pdf-thumb img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}
 .pdf-thumb::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.12));pointer-events:none}
 .guidance-card{min-height:100%}
 .guidance-card p{line-height:1.72}
@@ -2540,7 +2540,7 @@ body {
   }
   /* =========================================================
    WHATSAPP FLOTANTE — FIX GLOBAL MÓVIL
-   Servicios, Recursos, Contacto, FAQ
+   Servicios, Recursos, Contacto, Telesalud, FAQ
    ========================================================= */
 
 .whatsapp-float {
